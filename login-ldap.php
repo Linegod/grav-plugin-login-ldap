@@ -131,7 +131,7 @@ class LoginLDAPPlugin extends Plugin
             $ldap->bind($username, $credentials['password']);
 
             // Create Grav User
-            $grav_user = User::load(strtolower($username));
+            $grav_user = User::load(strtolower($credentials['username']));
 
             // Set defaults with only thing we know... username provided
             $grav_user['login'] = $credentials['username'];
