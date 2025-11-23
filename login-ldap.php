@@ -258,7 +258,7 @@ class LoginLDAPPlugin extends Plugin
             $this->grav['log']->error('plugin.login-ldap: ['. $e->getCode() . '] ' . $username . ' - ' . $message);
 
             // Just return so other authenticators can take a shot...
-            if ($message = "Invalid credentials") {
+            if ($message == "Invalid credentials") {
                 return;
             }
 
